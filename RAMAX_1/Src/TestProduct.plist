@@ -6,31 +6,31 @@
 		<key>name</key>
 		<string>Стол</string>
 		<key>info</key>
-		<string>За ним едят</string>
+		<string>Мебельное изделие, имеющее приподнятую горизонтальную или наклонную поверхность, предназначенную для размещения на ней предметов и (или) для выполнения работ, принятия пищи, игр, рисования, обучения и другой деятельности.</string>
 		<key>price</key>
-		<integer>100</integer>
+		<integer>3000</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Стул</string>
 		<key>info</key>
-		<string>На нем сидят</string>
+		<string>Мебель, предназначенная для сидения одного человека, со спинкой и сиденьем с подлокотниками или без них.</string>
 		<key>price</key>
-		<integer>200</integer>
+		<integer>1500</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Квартира</string>
 		<key>info</key>
-		<string>В ней живут</string>
+		<string>Один из видов жилого помещения, состоящий из одной или нескольких смежных комнат с отдельным наружным выходом, составляющее отдельную часть дома.</string>
 		<key>price</key>
-		<integer>1200000</integer>
+		<integer>10000000</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Машина</string>
 		<key>info</key>
-		<string>С помощью нее перемещаются</string>
+		<string>Техническое устройство, выполняющее механические движения для преобразования энергии, материалов и информации.</string>
 		<key>price</key>
 		<integer>500000</integer>
 	</dict>
@@ -38,7 +38,7 @@
 		<key>name</key>
 		<string>Карандаш</string>
 		<key>info</key>
-		<string>С помощью него пишут</string>
+		<string>Инструмент в виде стержня, изготавливаемого из пишущего материала (угля, графита, сухих красок и тому подобного).</string>
 		<key>price</key>
 		<integer>50</integer>
 	</dict>

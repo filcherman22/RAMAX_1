@@ -26,8 +26,7 @@ class ProductViewController: UIViewController {
             NotificationCenter.default.post(name: .removeProduct, object: nil)
         })
     }
-    @IBAction func tapPdfButton(_ sender: Any) {
-    }
+
     
     var product: NSDictionary?
     let nameKey = NameKey()
@@ -59,6 +58,14 @@ class ProductViewController: UIViewController {
         if !isActive{
             self.pdfButton.isEnabled = false
             self.buyButton.isEnabled = false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toWebView"{
+            if let list = segue.destination as? WebViewController{
+                list.pdfManager = PdfManager(title: self.nameLabel.text!, description: self.descriptionLabel.text!, price: self.priceLabel.text!)
+            }
         }
     }
 

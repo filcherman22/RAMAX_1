@@ -169,6 +169,43 @@
             </objects>
             <point key="canvasLocation" x="2446" y="1269"/>
         </scene>
+        <!--Поделиться-->
+        <scene sceneID="2CO-Jc-dBx">
+            <objects>
+                <viewController id="hNq-qh-XjE" customClass="WebViewController" customModule="RAMAX_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qby-Ul-KDM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-2Q-xds">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xbq-2Q-xds" firstAttribute="top" secondItem="Adf-VO-uZ2" secondAttribute="top" id="4LY-Ks-qVM"/>
+                            <constraint firstItem="xbq-2Q-xds" firstAttribute="trailing" secondItem="Adf-VO-uZ2" secondAttribute="trailing" id="9Cw-Ep-z8a"/>
+                            <constraint firstItem="xbq-2Q-xds" firstAttribute="bottom" secondItem="Adf-VO-uZ2" secondAttribute="bottom" id="9E1-ek-5Vr"/>
+                            <constraint firstItem="xbq-2Q-xds" firstAttribute="leading" secondItem="Adf-VO-uZ2" secondAttribute="leading" id="DzM-uj-uQT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Adf-VO-uZ2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Поделиться" id="UD5-OW-fA4">
+                        <barButtonItem key="rightBarButtonItem" title="Отправить" id="bGO-qz-nBK">
+                            <connections>
+                                <action selector="tapSendButton:" destination="hNq-qh-XjE" id="p74-dr-TLS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="xbq-2Q-xds" id="aLR-Yb-JBK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uA6-wZ-lwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4174" y="418"/>
+        </scene>
         <!--Продажа-->
         <scene sceneID="qty-cf-hpm">
             <objects>
@@ -247,7 +284,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOr-zx-g05">
                                 <rect key="frame" x="30" y="236" width="315" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4Gj-7D-2tZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="900" constant="21" id="4Gj-7D-2tZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -306,7 +343,7 @@
                                 </constraints>
                                 <state key="normal" title="Поделиться"/>
                                 <connections>
-                                    <action selector="tapPdfButton:" destination="Aea-lD-m1X" eventType="touchUpInside" id="nF7-dd-f2x"/>
+                                    <segue destination="hNq-qh-XjE" kind="show" identifier="toWebView" id="Dz2-0X-r8K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65K-uc-VCn">
@@ -322,6 +359,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fJD-Oy-6Yo" firstAttribute="top" secondItem="65K-uc-VCn" secondAttribute="bottom" constant="20" id="0HJ-sR-0MK"/>
+                            <constraint firstItem="pM5-gi-Bi5" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VFM-gR-BZe" secondAttribute="bottom" id="21l-mV-wt4"/>
                             <constraint firstItem="LOr-zx-g05" firstAttribute="leading" secondItem="pM5-gi-Bi5" secondAttribute="leading" constant="30" id="4u4-Ak-HFR"/>
                             <constraint firstItem="9FG-40-GOx" firstAttribute="leading" secondItem="pM5-gi-Bi5" secondAttribute="leading" constant="16" id="5cu-PP-SsC"/>
                             <constraint firstItem="pM5-gi-Bi5" firstAttribute="trailing" secondItem="65K-uc-VCn" secondAttribute="trailing" constant="30" id="7QY-YQ-5UG"/>
